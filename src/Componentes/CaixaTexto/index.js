@@ -4,7 +4,7 @@ const CaixaTexto = (props) => {
     return (
         <div className='caixa-texto'>
             <label>{ props.nome }</label>
-            <input></input>
+            <input  type={props.tipo} placeholder="Informe a quantidade dias" ></input>
         </div>
     )
 
