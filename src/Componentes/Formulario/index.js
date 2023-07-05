@@ -1,11 +1,11 @@
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
     return(
         <section className='formulario'>
             <form>
-                <ListaSuspensa></ListaSuspensa>
+                <ListaSuspensa itens={ props.itens }></ListaSuspensa>
             </form>
         </section>
     )
