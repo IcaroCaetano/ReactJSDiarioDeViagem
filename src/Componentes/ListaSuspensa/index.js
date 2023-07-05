@@ -2,7 +2,7 @@ import './ListaSupensa.css'
 
 const ListaSuspensa = (props) => {
     return (
-        <div className="lista-supensa">
+        <div className="lista-suspensa">
             <label>
                 País
             </label>
