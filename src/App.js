@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import './App.css';
 import Banner from './Componentes/Banner';
 import Formulario from './Componentes/Formulario';
 
 function App() {
+
+const [diarios, setDiarios] = useState([])
 
 const paises = [
   {
@@ -43,10 +46,16 @@ const paises = [
   }
 ]
 
+const aoNovoDiarioAdicionado = (diario) => {
+  console.log(diario)
+  setDiarios([...diarios, diario])
+}
+
   return (
     <div className="App">
         <Banner/>
-        <Formulario itens={ paises }/>
+        <Formulario aoNovoDiarioCadastrado = {diario => aoNovoDiarioAdicionado(diario)} 
+        itens={ paises }/>
     </div>
   );
 }
